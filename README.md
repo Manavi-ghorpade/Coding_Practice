@@ -1,1 +1,2 @@
-# LeetCode
+# Array
+1. Two Sum
