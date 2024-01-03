@@ -1,3 +1,3 @@
-# LeetCode
+# Coding practice 
 
-leetcode problems by data structure 
+problems by data structure in specific branch 
