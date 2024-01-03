@@ -17,6 +17,7 @@ public:
         ListNode* fast = head;
 
         // Iterate through the linked list while the fast pointer and its next node are not null.
+        //check Null first
         while (fast && fast->next)
         {
             // Move the slow pointer one step forward.

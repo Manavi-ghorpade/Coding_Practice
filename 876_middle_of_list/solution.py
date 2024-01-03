@@ -5,9 +5,9 @@ class Solution:
 
         # Iterate through the linked list while the fast pointer and its next node are not None.
         while fast and fast.next:
-            # Move the slow pointer one step forward.
+            # Move the slow pointer one step forward everytime.
             slow = slow.next
-            # Move the fast pointer two steps forward.
+            # Move the fast pointer two steps forward everytime.
             fast = fast.next.next
 
         # At this point, the slow pointer is at the middle node of the linked list.

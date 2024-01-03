@@ -1,6 +1,7 @@
 # 876. Middle of the Linked List
 
 Given the head of a singly linked list, return the middle node of the linked list.
+
 If there are two middle nodes, return the second middle node.
 
 Input: head = [1,2,3,4,5]
@@ -8,7 +9,6 @@ Input: head = [1,2,3,4,5]
 Output: [3,4,5]
 
 Explanation: The middle node of the list is node 3.
-
 # Intuition
 <!-- Describe your first thoughts on how to solve this problem. -->
 The goal is to find the middle node of a singly-linked list. The code uses two pointers, `slow` and `fast`, starting from the head of the list. The `slow` pointer moves one step at a time, and the `fast` pointer moves two steps at a time. By doing this, when the `fast` pointer reaches the end of the list, the `slow` pointer will be at the middle of the list.
