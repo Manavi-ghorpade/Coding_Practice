@@ -4,6 +4,7 @@ Input: head = [1,2,3,4,5], n = 2
 Output: [1,2,3,5]
 
 # Intuition
+
 <!-- Describe your first thoughts on how to solve this problem. -->
 The goal is to remove the N-th node from the end of a singly-linked list. Using two pointers, we can find the target node and modify the list accordingly.
 
