@@ -9,6 +9,7 @@ Output: [4,5,1,2,3]
 <!-- Describe your first thoughts on how to solve this problem. -->
 The algorithm calculates the number of nodes in the linked list and determines the effective rotation by taking the modulo if `k` is greater than the total number of nodes. It then moves the current pointer to the last element of the first part of the rotated list, detaches the first part from the rest of the list, connects the tail to the original head, and updates the head pointer to the new start of the rotated list.
 
+
 # Approach
 <!-- Describe your approach to solving the problem. -->
 1. Traverse the linked list to find the number of nodes.
