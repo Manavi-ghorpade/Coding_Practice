@@ -4,6 +4,7 @@ public:
     {
         unordered_map<int,int> mp;
         vector<int> ans;
+        
         for(int i=0;i<nums.size();++i)
         {
             mp.insert({nums[i], i});

@@ -2,6 +2,7 @@
 Given the head of a sorted linked list, delete all duplicates such that each element appears only once. Return the linked list sorted as well.
 
 # Intuition
+
 <!-- Describe your first thoughts on how to solve this problem. -->
 The function aims to remove duplicates from a sorted singly-linked list. It does this by traversing the list and skipping nodes with duplicate values.
 # Approach

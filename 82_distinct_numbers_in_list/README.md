@@ -2,6 +2,7 @@
 
 The goal of this function is to delete duplicates from a sorted singly-linked list. It does so by iterating through the list and modifying the pointers accordingly. The use of a dummy node simplifies edge case handling, and the 'match' variable helps track whether a duplicate has been found.
 
+
 ### Approach:
 
 1. **Initialize Pointers:** Initialize a dummy node pointing to the head, and a 'prev' pointer to keep track of the previous node.
