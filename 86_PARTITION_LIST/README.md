@@ -7,7 +7,6 @@ Input: head = [1,4,3,2,5,2], x = 3
 
 Output: [1,2,2,4,3,5]
 ### Intuition:
-
 The goal of this function is to partition a linked list into two parts, one containing nodes with values less than a given value `x`, and the other containing nodes with values greater than or equal to `x`.
 ### Approach:
 
