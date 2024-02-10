@@ -12,6 +12,5 @@ public:
         {
             nums[i]=temp[i];
         }
-      
     } 
 };  // time complexity - O(n) space complexity - O(n)
