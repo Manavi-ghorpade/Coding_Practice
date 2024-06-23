@@ -19,23 +19,17 @@ public:
         {
             return false;
         }
-        if(root->left==NULL && root->right==NULL)
+        if(root->left==NULL && root->right==NULL) //leaf node
         {
-            if(sum+root->val == targetSum)
+            if(sum+root->val == targetSum) //if sum match then set ans to true
             {
                 ans = true;
             }
         }
-        sum = sum+root->val;
-        if(root->left!=NULL)
-        {
-            hasPathSum(root->left,targetSum);
-        }
-        if(root->right!=NULL)
-        {
-            hasPathSum(root->right,targetSum);
-        }
-        sum = sum-root->val;
+        sum = sum+root->val; //do addition of node value to variable
+        hasPathSum(root->left,targetSum);
+        hasPathSum(root->right,targetSum);
+        sum = sum-root->val; //remove variable from sum as we are backtracking
         return ans;
     }
 };
