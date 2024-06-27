@@ -1,50 +1,15 @@
-# Has Path Sum in Binary Tree
+### Intuition
+The problem is to find all paths from the root to leaf nodes in a binary tree. Each path should be represented as a string in the form "root->node1->node2->...->leaf". To solve this problem, we need to traverse the tree and record the path for each leaf node.
 
-## Overview
+### Approach
+1. **Recursive Traversal**: We use a recursive function to traverse the binary tree. We maintain a `path` string that records the current path from the root to the current node.
+2. **Base Case**: If the current node is `None`, we return immediately as there is nothing to process.
+3. **Leaf Node**: If the current node is a leaf (both left and right children are `None`), we append the current node's value to the `path` and add it to the result list.
+4. **Internal Node**: If the current node is not a leaf, we append the current node's value followed by `"->"` to the `path` and recursively call the function for both left and right children.
+5. **Result**: The `result` list collects all paths from root to leaf nodes.
 
-This repository contains a solution to determine if there exists a root-to-leaf path in a given binary tree such that the sum of the node values along the path equals a specified target sum.
+### Time Complexity
+The time complexity is \(O(N)\), where \(N\) is the number of nodes in the tree. This is because each node is visited exactly once.
 
-## Problem Statement
-
-Given a binary tree and a target sum, implement a function to determine if the tree has a root-to-leaf path such that the sum of the node values along the path equals the target sum.
-
-### Definition for a binary tree node (Python):
-
-```python
-class TreeNode:
-    def __init__(self, val=0, left=None, right=None):
-        self.val = val
-        self.left = left
-        self.right = right
-```
-
-## Solution Approach
-
-The solution uses a depth-first search (DFS) approach to explore all paths from the root to the leaf nodes and checks if any path has a sum equal to the target sum.
-
-### Approach:
-
-1. **Base Case:**
-   - If the current node is `None`, return `False` (i.e., no path exists).
-
-2. **Leaf Node Check:**
-   - If the current node is a leaf (both left and right children are `None`), check if the current sum equals the target sum.
-
-3. **Recursive Step:**
-   - Add the current node's value to the current sum.
-   - Recursively check the left and right subtrees to see if any path sum equals the target sum.
-
-### Steps:
-
-1. Check if the root node is `None`. If it is, return `False`.
-2. Initialize the current sum to `0`.
-3. Add the current node's value to the current sum.
-4. If the current node is a leaf, check if the current sum equals the target sum.
-5. Recursively check the left and right subtrees, passing the updated current sum.
-6. Return `True` if either subtree has a path that meets the criteria.
-
-## Time and Space Complexity
-
-- **Time Complexity:** O(n), where n is the number of nodes in the tree. The function visits each node once in the worst case.
-- **Space Complexity:** O(h), where h is the height of the tree. In the worst case (a skewed tree), the space complexity can be O(n) due to the recursion stack.
-
+### Space Complexity
+The space complexity is \(O(H)\), where \(H\) is the height of the tree. This accounts for the recursive call stack. In the worst case (a skewed tree), \(H\) could be \(N\), and in the best case (a balanced tree), \(H\) would be \(\log N\).

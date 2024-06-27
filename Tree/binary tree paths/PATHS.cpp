@@ -25,8 +25,8 @@ public:
             return;
         }
         S+=to_string(root->val) + "->";
-        binaryTreePaths(root->left);
-        binaryTreePaths(root->right);
+        ans(vec,S,root->left);
+        ans(vec,S,root->right);
     }
     vector<string> binaryTreePaths(TreeNode* root) 
     {
