@@ -5,17 +5,28 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def binaryTreePaths(self, root: Optional[TreeNode]) -> List[str]:
-        result = []
-        def ans(node,path):
-            if node is None:
+    def findMode(self, root: Optional[TreeNode]) -> List[int]:
+        ans = []
+        prev =0
+        maximum =0
+        count =0
+        def inorder(root):
+            nonlocal prev, maximum, count, ans
+            if root is None:
                 return
-            if node.left is None and node.right is None:
-                path+=str(node.val)
-                result.append(path)
-                return
-            path+=str(node.val)+"->"
-            ans(node.left,path)
-            ans(node.right,path)
-        ans(root,"")
-        return result
+            inorder(root.left)
+            if(prev == root.val):
+                count+=1
+            else:
+                count=1
+                prev=root.val
+            if maximum<count:
+                maximum=count
+                ans.clear()
+                ans.append(root.val)
+            elif maximum==count and len(ans)>0:
+                ans.append(root.val)
+            inorder(root.right)
+        inorder(root)
+        return ans
+        
