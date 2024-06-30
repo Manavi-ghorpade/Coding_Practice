@@ -8,7 +8,7 @@ The problem requires us to find the sum of all left leaves in a binary tree. A l
 4. **Return the Total Sum:** Return the accumulated sum of left leaves.
 
 # Complexity
-- **Time Complexity:** $$O(n)$$
+- **Time Complexity:** O(n)
   - We visit each node exactly once, where `n` is the number of nodes in the tree.
-- **Space Complexity:** $$O(h)$$
+- **Space Complexity:** O(h)
   - In the worst case, the recursion stack will go as deep as the height of the tree, which is `h`. In the worst case (a completely unbalanced tree), `h` can be `n`. In the best case (a completely balanced tree), `h` can be `log(n)`.
