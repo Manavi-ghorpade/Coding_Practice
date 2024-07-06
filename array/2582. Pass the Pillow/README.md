@@ -45,5 +45,5 @@ O(1)
 ### Summary
 
 - **Intuition**: Calculate the number of full cycles, then handle the remaining time steps based on the direction of the pillow passing.
-- **Time Complexity**: \( O(n) \)
+- **Time Complexity**:  \( O(\frac{\text{time}}{n}) \)
 - **Space Complexity**: \( O(1) \)
