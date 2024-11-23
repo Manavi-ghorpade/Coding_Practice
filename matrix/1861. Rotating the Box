@@ -1,0 +1,44 @@
+class Solution {
+public:
+    vector<vector<char>> rotateTheBox(vector<vector<char>>& box) 
+    {
+        int n = box.size();
+        int m = box[0].size();
+        vector<vector<char>> result(m, vector<char>(n));
+        //transpose
+        for(int i=0;i<m;++i)
+        {
+            for(int j=0;j<n;++j)
+            {
+                result[i][j]=box[j][i];
+            }
+        }
+        //reverse each row - for 90 degree
+        for(vector<char>& vec: result)
+        {
+            reverse(vec.begin(), vec.end());
+        }
+
+        //apply the gravity
+        //start from last row
+        for(int j=0;j<n;++j)
+        {
+            int idxofempty = m-1;
+            for(int i=m-1;i>=0;--i)
+            {
+                if(result[i][j]=='*')
+                {
+                    idxofempty=i-1;
+                    continue;
+                }
+                if(result[i][j]=='#')
+                {
+                    result[i][j]='.';
+                    result[idxofempty][j]='#';
+                    idxofempty--;
+                }
+            }
+        }
+        return result;
+    }
+};
